@@ -38,7 +38,7 @@ class user:
             
             
     
-       @classmethod
+    @classmethod
     def user_exist(cls,name):
 
         for user in cls.user_list:
@@ -46,7 +46,7 @@ class user:
                     return True
                 
                 
-                    @classmethod
+    @classmethod
     def display_users(cls):
 
         return cls.user_list
@@ -54,9 +54,21 @@ class user:
         return False
     
     
-        @classmethod
+    @classmethod
     def copy_password(cls,name):
         user_found = User.find_by_name(name)
         pyperclip.copy(user_found.password)
+        
+        
+       @classmethod
+    def display_user(cls,password):
+
+        user_user_list = []
+
+        for user in cls.user_list:
+            if user.user_password == password:
+                user_user_list.append(password)
+
+        return user_user_list
         
     
