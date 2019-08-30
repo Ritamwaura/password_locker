@@ -70,5 +70,15 @@ class user:
                 user_user_list.append(password)
 
         return user_user_list
+    
+        @classmethod
+    def log_in(cls, name, password):
+
+    
+        for user in cls.user_list:
+            if user.username == name and user.password == password:
+                return Credential.credential_list
+
+        return False
         
     
