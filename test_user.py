@@ -8,7 +8,7 @@ class TestUser(unittest.TestCase):
         '''
         Set up method to run before each test cases.
         '''
-        self.new_user = User("limo","brian","limobrian","limooh") 
+        self.new_user = User("ritamwaura","britney","ritamwaurabritney","rita") 
 
 
     def test_init(self):
@@ -16,10 +16,10 @@ class TestUser(unittest.TestCase):
         test_init test case to test if the object is initialized properly
         '''
 
-        self.assertEqual(self.new_user.first_name,"limo")
-        self.assertEqual(self.new_user.last_name,"brian")
-        self.assertEqual(self.new_user.username,"limobrian")
-        self.assertEqual(self.new_user.password,"limooh")
+        self.assertEqual(self.new_user.first_name,"ritamwaura")
+        self.assertEqual(self.new_user.last_name,"britney")
+        self.assertEqual(self.new_user.username,"ritamwaurabritney")
+        self.assertEqual(self.new_user.password,"rita")
         
 
     def test_save_user(self):
@@ -52,7 +52,7 @@ class TestUser(unittest.TestCase):
             test_delete_user to test if we can remove a user from our user list
             '''
             self.new_user.save_user()
-            test_user = User("Test","user","limooh","test@user.com") 
+            test_user = User("Test","user","rita","test@user.com") 
             test_user.save_user()
 
             self.new_user.delete_user()
@@ -61,10 +61,10 @@ class TestUser(unittest.TestCase):
 def test_find_user_by_name(self):
 
         self.new_user.save_user()
-        test_user = User("Test","user","limooh","test@user.com") # new user
+        test_user = User("Test","user","rita","test@user.com") # new user
         test_user.save_user()
         
-        found_user = User.find_by_name("limooh")
+        found_user = User.find_by_name("rita")
 
         self.assertEqual(found_user.password,test_user.password)
         
@@ -73,10 +73,10 @@ def test_user_exists(self):
 
 
         self.new_user.save_user()
-        test_user = User("Test","user","limooh","test@user.com") 
+        test_user = User("Test","user","rita","test@user.com") 
         test_user.save_user()
 
-        user_exists = User.user_exist("limooh")
+        user_exists = User.user_exist("rita")
 
         self.assertTrue(user_exists)
         
@@ -88,7 +88,7 @@ def test_display_all_users(self):
 def test_copy_password(self):
 
         self.new_user.save_user()
-        User.copy_password("limooh")
+        User.copy_password("rita")
 
         self.assertEqual(self.new_user.password,pyperclip.paste())
         
