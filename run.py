@@ -12,3 +12,17 @@ def create_user(first_name, last_name, phone, password):
 def save_users(user):
 
     user.save_user()
+    
+    
+def del_user(user):
+    
+    user.delete_user()
+
+
+def find_user(name):
+
+    return User.find_by_name(name)
+
+def check_existing_users(name):
+
+    return User.user_exist(name)
