@@ -53,3 +53,10 @@ class user:
 
         return False
     
+    
+        @classmethod
+    def copy_password(cls,name):
+        user_found = User.find_by_name(name)
+        pyperclip.copy(user_found.password)
+        
+    
