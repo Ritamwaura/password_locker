@@ -9,5 +9,7 @@ Rita mwaura
 No bugs
 ## Testing application
 $ python3.7run.py
+## LICENSE
+The application is under an [MIT License].
 ## contact information
 mwaurarita2019@gmail.com
