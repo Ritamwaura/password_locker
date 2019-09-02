@@ -1,7 +1,5 @@
 import pyperclip 
-
-
-from credential import Credential
+from credential import credential
 
 
 
@@ -80,7 +78,7 @@ class User:
     
         for user in cls.user_list:
             if user.username == name and user.password == password:
-                return Credential.credential_list
+                return credential.credential_list
 
         return False
 

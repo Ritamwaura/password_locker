@@ -21,7 +21,7 @@ def save_credential(self):
         save_credential method saves credentials objects into credential_list
         '''
 
-        Credential.credential_list.append(self) 
+     Credential.credential_list.append(self) 
         
 @classmethod
 def generate_password(cls):
